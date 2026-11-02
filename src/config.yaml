@@ -1,6 +1,6 @@
 site:
   name: Trustpack Mover
-  site: 'https://trustpackmover.com' # Replace with your actual domain when live
+  site: 'https://pack-addis-movers.vercel.app/' # Replace with your actual domain when live
   base: '/'
   trailingSlash: false
 
@@ -25,7 +25,7 @@ metadata:
   twitter:
     handle: '@trustpackmover'
     site: '@trustpackmover'
-    cardType: summary_large_image
+    cardType: summary_large_image 
 
 i18n:
   language: en

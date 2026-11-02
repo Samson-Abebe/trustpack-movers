@@ -21,7 +21,7 @@ const metadata = {
  <Hero
     tagline="About Us"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+     src: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=2070&q=80',
       alt: 'Trustpack Mover Team',
     }}
   >
@@ -123,7 +123,7 @@ const metadata = {
   },
 ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    src: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1740&q=80',
       alt: 'Colorful Image',
     }}
   />
@@ -133,38 +133,39 @@ const metadata = {
  
 
   <!-- Timeline Widget **************** -->
-
-  <Timeline
-    id="history"
-    tagline="Our story"
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+<Timeline
+    id="achievements"
+    tagline="Milestones & Track Record"
+    title="Key Achievements"
+    subtitle="Our journey of delivering dependable relocation, warehousing, and corporate moving solutions across Ethiopia."
     layout="alternate"
     items={[
       {
-        date: '2019',
-        title: 'The first template',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:rocket',
-      },
-      {
-        date: '2021',
-        title: 'Global reach',
+        date: 'Founded',
+        title: 'Safety-First Relocation Model',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:globe',
+          'Established to solve moving security challenges in Ethiopia by offering 100% accountable, all-inclusive packing and transport.',
+        icon: 'tabler:shield-check',
       },
       {
-        date: '2023',
-        title: 'Positive customer feedback and reviews',
+        date: 'Corporate Growth',
+        title: 'Trusted by Enterprise & Corporate Clients',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:message-star',
+          'Partnered with major corporate entities like Trade Link PLC, embassies, and institutions for seamless office relocations with minimal downtime.',
+        icon: 'tabler:building-skyscraper',
       },
       {
-        date: '2026',
-        title: 'Awards and recognition as industry experts',
-        description: 'Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.',
+        date: 'Service Expansion',
+        title: 'Warehousing & Specialized Assembly',
+        description:
+          'Expanded operations to include secure temporary storage facilities alongside expert TV mounting and complex furniture dismantling.',
+        icon: 'tabler:building-warehouse',
+      },
+      {
+        date: 'Present Day',
+        title: 'Successful Moves',
+        description:
+          'Recognized as a leading professional moving service across Addis Ababa and regional routes, backed by top customer satisfaction.',
         icon: 'tabler:award',
         highlight: true,
       },
@@ -227,26 +228,31 @@ const metadata = {
 
   <!-- Features2 Widget ************** -->
 
+
   <Features2
-    title="Our locations"
-    tagline="Find us"
+    title="Contact & Locations"
+    tagline="Find Us"
     columns={4}
     items={[
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Fiyel Bet Branch',
+        description: 'Fiyel Bet (30m road), Addis Ababa, Ethiopia',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Kality Branch',
+        description: 'Sheger Building, Kality, Addis Ababa, Ethiopia',
+        icon: 'tabler:map-pin',
       },
       {
         title: 'Telephone',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Email',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        description: '0968777773 / 0909388181',
+        icon: 'tabler:phone',
       },
       {
         title: 'Telegram',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        description: '@Trustpackandmovers',
+        icon: 'tabler:brand-telegram',
       },
     ]}
   />

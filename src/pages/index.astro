@@ -2,7 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-
+import mark from '~/assets/images/profileicon.webp?url';
 import Features from '~/components/widgets/Features.astro';
 import QuickStart from '~/components/widgets/QuickStart.astro';
 
@@ -542,75 +542,65 @@ const structuredData = [
 </Projects>
 
   <!-- Timeline Widget **************** -->
-
-  <Timeline
-    id="story"
+<Timeline
+    id="our-process"
     layout="alternate"
-    tagline="Our story"
-    title="One template, since 2022"
-    subtitle="Started before Astro 1.0 shipped, shaped by every Astro release since, and by the people who kept sending pull requests."
+    tagline="How We Work"
+    title="Your Move, Step by Step"
+    subtitle="From your first call to settling into your new space—here is how we make relocation effortless."
     items={[
       {
-        date: 'June 2022',
-        title: 'A template for a framework still in beta',
+        title: '1. Initial Inquiry & Quote Request',
         description:
-          'AstroWind starts on Astro 1.0 beta with a handful of pages, a few widgets and one idea: a website can be fast, simple and good-looking at the same time.',
-        icon: 'tabler:rocket',
+          'Contact our call center or send photos/videos of your items, location details, and floor levels via Telegram or WhatsApp.',
+        icon: 'tabler:phone-call',
       },
       {
-        date: '2022',
-        title: 'The most starred Astro theme, in its first year',
+        title: '2. Custom Pricing or Site Survey',
         description:
-          'By December it is the most starred theme in the Astro ecosystem, a place it would hold year after year. The first pull requests from strangers arrive, and they keep coming.',
-        icon: 'tabler:star-filled',
+          'Our team calculates a clear, transparent rate, or a dedicated supervisor visits your venue to conduct an on-site survey.',
+        icon: 'tabler:calculator',
       },
       {
-        date: '2022–2023',
-        title: 'The busiest stretch',
+        title: '3. Packing with High-Grade Materials',
         description:
-          'Astro grows fast and the template grows with it: collections for content, better images, page transitions. The blog matures, the widgets double, the road to 1.0 begins, and more people than ever send pull requests.',
-        icon: 'tabler:users-group',
+          'On moving day, our crew arrives with all necessary boxes, plastic wrap, plaster, and multi-layer bubble wrap to pack every item securely.',
+        icon: 'tabler:box-seam',
       },
       {
-        date: '2024',
-        title: 'Polish',
+        title: '4. Safe Dismantling & Loading',
         description:
-          'Astro 4, and a year of small, careful improvements, most of them sent in by contributors: accessibility, tooling, ways to edit and ways to deploy. Three thousand stars by September.',
-        icon: 'tabler:puzzle',
+          'We unmount large TVs, disassemble beds, wardrobes, and office furniture, loading everything carefully onto our dedicated trucks.',
+        icon: 'tabler:truck-loading',
       },
       {
-        date: '2025',
-        title: 'Steady, and quieter',
+        title: '5. Fast & Secure Transport',
         description:
-          'Astro 5 and regular updates. Fewer commits, nothing broken, and the stars kept coming: five thousand by October.',
-        icon: 'tabler:refresh',
+          'Your possessions are transported safely within Addis Ababa or across regional routes throughout Ethiopia.',
+        icon: 'tabler:truck-delivery',
       },
       {
-        date: '2026',
-        title: 'Astro 7 and Tailwind CSS 4',
+        title: '6. Unpacking, Assembly & Setup',
         description:
-          'Two framework majors in one year. The template gets a new generation of widgets, complete landing pages, a blog that finally reads like documentation, and a guide so coding assistants know their way around.',
-        icon: 'tabler:sparkles',
+          'We unpack, reassemble your furniture, mount your TVs, and place every item back in its designated spot in as little as 4 hours.',
+        icon: 'tabler:home-check',
       },
       {
-        date: '2026',
-        title: 'Release v1',
+        title: '7. Job Completed & Verified',
         description:
-          'Four years after the first commit, the demo has no placeholders left: every page, every landing page and every post is real, and the template is ready for whatever comes next.',
+          'You inspect your fully setup space with zero damage and total satisfaction before we finish.',
         icon: 'tabler:circle-check-filled',
         highlight: true,
       },
-      { icon: 'tabler:dots', ghost: true },
     ]}
   />
-
   <!-- Note Widget ******************* -->
 
 
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <BlogHighlightedPosts
+  <!-- <BlogHighlightedPosts
     title="Find out more content in our Blog"
     postIds={[
       'get-started-website-with-astro-tailwind-css',
@@ -622,7 +612,7 @@ const structuredData = [
                         Each new article will be an important step that you will need to know to be an expert in creating a website using Astro v7 + Tailwind CSS v4.
                         Astro is a very interesting technology. Thanks.
                 `}
-  />
+  /> -->
 
   <!-- FAQs Widget ******************* -->
 
@@ -671,40 +661,40 @@ const structuredData = [
     title="Words from real customers"
     testimonials={[
       {
-        testimonial: `The designs are not only visually appealing but also highly professional. The templates have saved me a significant amount of time while helping me make a lasting impression on my clients.`,
+        testimonial: `Your employees are good and I really like their work. Thank you so much for all your help throughout our relocation!`,
         rating: 5,
-        name: 'Emily Kennedy',
-        job: 'Front-end developer',
+        name: 'Asrat Kuma',
+      
         image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Emily Kennedy Image',
+          src: mark,
+          alt: 'Asrat Kuma',
         },
       },
       {
-        testimonial: `It beautifully showcases my work, with its clean and elegant design that lets my photographs shine. Customization was a breeze, even for a non-tech person like me. The result is a professional and immersive portfolio that's garnered numerous compliments.`,
+        testimonial: `Thank you for your service. It was really good and the boys were so cooperative throughout the whole process.`,
         rating: 5,
-        name: 'Sarah Hansen',
-        job: 'Photographer',
+        name: 'Tigist Haile',
+     
         image: {
-          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sarah Hansen Image',
+          src: mark,
+          alt: 'Tigist Haile',
         },
       },
       {
-        testimonial: `I discovered these templates and I'm impressed by their variety and quality. They've helped me establish a consistent brand image across my marketing and social platforms, elevating my business's overall appearance.`,
+       testimonial: `Very professional and effective job, thank you Trustpack Mover. Really appreciated your hard work and nice team!`,
         rating: 5,
-        name: 'Mark Wilkinson',
-        job: 'Small business owner',
+        name: 'Dawit Yohannes',
+       
         image: {
-          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
-          alt: 'Mark Wilkinson Image',
+          src: mark,
+          alt: 'Dawit Yohannes',
         },
       },
     ]}
     callToAction={{
       target: '_blank',
       text: 'More testimonials...',
-      href: 'https://github.com/arthelokyo/astrowind',
+      href: 'https://t.me/Trustpackandmovers',
       icon: 'tabler:chevron-right',
     }}
   />

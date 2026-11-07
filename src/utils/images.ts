@@ -25,20 +25,62 @@ const loadLocalImages = () => {
  *   - `"http(s)://…"` or `"/path"` → returned as-is (external or public/)
  *   - `"~/assets/images/…"`        → resolved to its ImageMetadata via the glob
  */
+// export const findImage = async (
+//   imagePath?: string | ImageMetadata | null
+// ): Promise<string | ImageMetadata | undefined | null> => {
+//   if (typeof imagePath !== 'string') return imagePath;
+//   if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('/'))
+//     return imagePath;
+//   if (!imagePath.startsWith('~/assets/images')) return imagePath;
+
+//   const images = loadLocalImages();
+//   const key = imagePath.replace('~/', '/src/');
+//   const loader = images[key];
+
+//   if (typeof loader !== 'function') return null;
+//   return ((await loader()) as { default: ImageMetadata }).default;
+// };
+
+
+
 export const findImage = async (
   imagePath?: string | ImageMetadata | null
 ): Promise<string | ImageMetadata | undefined | null> => {
   if (typeof imagePath !== 'string') return imagePath;
-  if (imagePath.startsWith('http://') || imagePath.startsWith('https://') || imagePath.startsWith('/'))
+
+  // External URLs and public images
+  if (
+    imagePath.startsWith('http://') ||
+    imagePath.startsWith('https://') ||
+    imagePath.startsWith('/')
+  ) {
     return imagePath;
-  if (!imagePath.startsWith('~/assets/images')) return imagePath;
+  }
+
+  // Normalize asset paths from frontmatter
+  const normalizedPath = imagePath
+    .replace(/^(\.\.\/)+assets\/images\//, '~/assets/images/')
+    .replace(/^\/?src\/assets\/images\//, '~/assets/images/');
+
+  if (!normalizedPath.startsWith('~/assets/images/')) {
+    return imagePath;
+  }
 
   const images = loadLocalImages();
-  const key = imagePath.replace('~/', '/src/');
+
+  // Match the path against the actual imported asset
+  const key = normalizedPath.replace('~/', '/src/');
+
   const loader = images[key];
 
-  if (typeof loader !== 'function') return null;
-  return ((await loader()) as { default: ImageMetadata }).default;
+  if (typeof loader !== 'function') {
+    console.warn(`Image not found: ${imagePath}`);
+    return null;
+  }
+
+  const imported = await loader() as { default: ImageMetadata };
+
+  return imported.default;
 };
 
 const OG_WIDTH = 1200;

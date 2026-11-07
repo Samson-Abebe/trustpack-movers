@@ -2,8 +2,7 @@
 import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
-
-import StickyCTA from '~/components/widgets/StickyCTA.astro';
+import spic_____ from '~/assets/images/servic/servic_6.webp';
 import Timeline from '~/components/widgets/Timeline.astro';
 
 
@@ -11,7 +10,7 @@ import Timeline from '~/components/widgets/Timeline.astro';
 
 
 
-const destination = 'https://github.com/arthelokyo/astrowind';
+
 
 const metadata = {
   title: 'Click-Through Landing Page Example & Guide',
@@ -28,7 +27,7 @@ const metadata = {
   title="Thorough Home & Office Cleaning Services!"
   subtitle="Step into a fresh, spotless space with Trustpack and Move. We deliver thorough pre-move or post-move cleaning for your home or office space. Our cleaning crews sanitize floors, clean windows, scrub kitchens and bathrooms, and remove move-in dust—leaving your old space pristine for handover and your new location ready for living."
   image={{
-    src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: spic_____,
     alt: 'Thorough Pre-Move or Post-Move Cleaning for Home or Office',
     class: 'w-full h-auto object-contain max-h-none',
   }}
@@ -97,5 +96,4 @@ items={[
 
   <!-- On phones the hero button is long gone; the bar brings the click back once the reader scrolls -->
 
-  <StickyCTA text="Get the template" href={destination} target="_blank" label="One destination, three placements" />
 </Layout>

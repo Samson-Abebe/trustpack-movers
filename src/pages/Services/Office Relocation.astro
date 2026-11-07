@@ -3,7 +3,6 @@ import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 
-import StickyCTA from '~/components/widgets/StickyCTA.astro';
 import Timeline from '~/components/widgets/Timeline.astro';
 
 
@@ -11,7 +10,7 @@ import Timeline from '~/components/widgets/Timeline.astro';
 
 
 
-const destination = 'https://github.com/arthelokyo/astrowind';
+import spic_ from '~/assets/images/servic/servic_2.jpg';
 
 const metadata = {
   title: 'Click-Through Landing Page Example & Guide',
@@ -27,9 +26,9 @@ const metadata = {
 <Hero2
   tagline="Commercial Office Logistics"
   title="Professional Office Relocation & Equipment Transit!"
-  subtitle="Minimize business downtime with corporate moving solutions from Trustpack and Move. We specialize in the professional handling of office desks, chairs, files, and electronic equipment. From dismantling workstations and organizing sensitive document files to reassembling conference rooms (as demonstrated with Trade Link PLC), our team guarantees a swift, secure office move."
+  subtitle="Minimize downtime with swift corporate moving solutions. We professionally handle office furniture, IT equipment, and document filing with full setup and reassembly."
   image={{
-    src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src: spic_,
     alt: 'Professional Handling of Office Desks Chairs and Equipment',
     class: 'w-full h-auto object-contain max-h-none',
   }}
@@ -95,5 +94,5 @@ items={[
 
   <!-- On phones the hero button is long gone; the bar brings the click back once the reader scrolls -->
 
-  <StickyCTA text="Get the template" href={destination} target="_blank" label="One destination, three placements" />
+  
 </Layout>

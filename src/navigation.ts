@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink, } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -62,31 +62,40 @@ export const headerData = {
      
       ],
     },
+
+
+    
+
+
+
+
+
+
     {
       text: 'Blog',
       href: getPermalink("/Blog"),
-      // links: [
-      //   {
-      //     text: 'Blog List',
-      //     href: getBlogPermalink(),
-      //   },
-      //   {
-      //     text: 'Article',
-      //     href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-      //   },
-      //   {
-      //     text: 'Article (with MDX)',
-      //     href: getPermalink('markdown-elements-demo-post', 'post'),
-      //   },
-      //   {
-      //     text: 'Category Page',
-      //     href: getPermalink('tutorials', 'category'),
-      //   },
-      //   {
-      //     text: 'Tag Page',
-      //     href: getPermalink('astro', 'tag'),
-      //   },
-    //  ],
+      links: [
+        {
+          text: 'Blog List',
+          href: getBlogPermalink(),
+        },
+        {
+          text: 'trustpack',
+          href: getPermalink('tag/trustpack'),
+        },
+        {
+          text: 'cost efficiency',
+          href: getPermalink('tag/cost-efficiency'),
+        },
+        {
+          text: 'corporate relocation',
+          href: getPermalink('tag/corporate-relocation'),
+        },
+        {
+          text: 'Addis adama',
+          href: getPermalink('tag/addis-ababa-adama'),
+        },
+     ],
     },
   ],
   actions: [{ text: 'Contact us', href: getPermalink('/contact'), target: '_blank' }],

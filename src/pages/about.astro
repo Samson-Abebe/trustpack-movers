@@ -8,6 +8,10 @@ import Team from '~/components/widgets/Team.astro';
 import Timeline from '~/components/widgets/Timeline.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
+
+import about from '~/assets/images/about.jpg';
+import about_ from '~/assets/images/about_.jpg';
+
 const metadata = {
   title: 'About us',
   description:
@@ -19,14 +23,14 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
  <Hero
-    tagline="About Us"
+  
     image={{
-     src: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?w=2070&q=80',
+     src: about,
       alt: 'Trustpack Mover Team',
     }}
   >
     <Fragment slot="title">
-      Safe and Reliable Relocation Services in Ethiopia <br />
+      Moves<br />
       <span class="text-accent dark:text-white">With Trustpack Mover</span>
     </Fragment>
 
@@ -53,7 +57,6 @@ const metadata = {
 
   <Features3
     title="Our Moving Services"
-    subtitle="From office and residential relocations to electronics transportation and special-item packing, we handle every move with care, safety, and reliability."
     columns={3}
     isBeforeContent={true}
     items={[
@@ -123,7 +126,7 @@ const metadata = {
   },
 ]}
     image={{
-    src: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1740&q=80',
+    src: about_,
       alt: 'Colorful Image',
     }}
   />

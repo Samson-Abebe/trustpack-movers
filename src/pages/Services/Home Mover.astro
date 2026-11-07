@@ -3,7 +3,7 @@ import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 
-import StickyCTA from '~/components/widgets/StickyCTA.astro';
+import spic from '~/assets/images/servic/servic_1.jpg';
 import Timeline from '~/components/widgets/Timeline.astro';
 
 
@@ -11,7 +11,7 @@ import Timeline from '~/components/widgets/Timeline.astro';
 
 
 
-const destination = 'https://github.com/arthelokyo/astrowind';
+
 
 const metadata = {
   title: 'Click-Through Landing Page Example & Guide',
@@ -27,9 +27,9 @@ const metadata = {
 <Hero2
   tagline="Residential Moving Experts"
   title="Careful Unpacking, Packing & Home Relocation!"
-  subtitle="Enjoy a completely hassle-free home transition with Trustpack and Move. We take 100% responsibility for carefully unpacking, packing, and relocating household items across Addis Ababa and beyond. From delicate kitchenware and personal belongings to heavy furniture, our professional crew handles your move end-to-end in as little as 4 hours—protecting your home assets and saving you days of stressful effort."
+  subtitle="Enjoy a stress-free home move with Trustpack. We take 100% responsibility for packing, relocating, and setting up your household items across Addis Ababa and beyond in as little as 4 hours."
   image={{
-   src: '~/assets/images/home_m.png',
+   src: spic,
     alt: 'Careful Unpacking and Relocating Household Items',
     class: 'w-full h-auto object-contain max-h-none',
   }}
@@ -98,5 +98,5 @@ items={[
 
   <!-- On phones the hero button is long gone; the bar brings the click back once the reader scrolls -->
 
-  <StickyCTA text="Get the template" href={destination} target="_blank" label="One destination, three placements" />
+  
 </Layout>

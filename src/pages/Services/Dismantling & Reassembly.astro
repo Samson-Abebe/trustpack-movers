@@ -3,7 +3,7 @@ import Layout from '~/layouts/LandingLayout.astro';
 
 import Hero2 from '~/components/widgets/Hero2.astro';
 
-import StickyCTA from '~/components/widgets/StickyCTA.astro';
+import spic___ from '~/assets/images/servic/servic_4.jpg';
 import Timeline from '~/components/widgets/Timeline.astro';
 
 
@@ -11,7 +11,7 @@ import Timeline from '~/components/widgets/Timeline.astro';
 
 
 
-const destination = 'https://github.com/arthelokyo/astrowind';
+
 
 const metadata = {
   title: 'Click-Through Landing Page Example & Guide',
@@ -29,7 +29,7 @@ const metadata = {
   title="Expert Dismantling & Reassembly Services!"
   subtitle="Take the complexity out of large furniture and electronics with Trustpack and Move. We provide expert dismantling and setup of TVs, beds, wardrobes, and office furniture. Our skilled technicians ensure hardware is carefully unmounted, transported safely without missing screws or components, and precisely reassembled or wall-mounted at your new location."
   image={{
-    src: 'https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+    src:spic___,
     alt: 'Expert Dismantling and Setup of Furniture and TVs',
     class: 'w-full h-auto object-contain max-h-none',
   }}
@@ -98,5 +98,4 @@ items={[
 
   <!-- On phones the hero button is long gone; the bar brings the click back once the reader scrolls -->
 
-  <StickyCTA text="Get the template" href={destination} target="_blank" label="One destination, three placements" />
 </Layout>

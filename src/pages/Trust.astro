@@ -8,7 +8,13 @@ import Features2 from '~/components/widgets/Features2.astro';
 import FeatureTabs from '~/components/widgets/FeatureTabs.astro';
 import Gallery from '~/components/widgets/Gallery.astro';
 
-
+import trust from '~/assets/images/trust.jpg';
+import gl from '~/assets/images/gl/gl_1.jpg';
+import gl1 from '~/assets/images/gl/gl_2.jpg';
+import gl2 from '~/assets/images/gl/gl_3.jpg';
+import gl3 from '~/assets/images/gl/gl_4.jpg';
+import gl4 from '~/assets/images/gl/gl_5.jpg';
+import gl5 from '~/assets/images/gl/gl_6.jpg';
 // A product details landing page presents one product at three depths: what it
 // is, what it does, and exactly what you get. The product here is real (this
 // template), so the page is both a working example and a guide: each section is
@@ -32,10 +38,9 @@ const metadata = {
   <Hero
     tagline="💬 What Our Customers Say ⭐"
     title="Real stories from families and businesses who trust us!"
-    subtitle="Every successful move, happy customer, and positive review is proof of our commitment. Explore our customer experiences and see why people trust us to move their belongings safely and on time."
- 
+    
     image={{
-      src: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=2174&q=80',
+      src:trust,
       alt: 'A spotlight on a product. Product Details Landing Page Demo',
     }}
   />
@@ -102,32 +107,32 @@ const metadata = {
     subtitle="From careful packing and secure loading to safe transportation and final delivery, see how our team handles your belongings with care at every stage of the moving process."
  images={[
   {
-    src: 'https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=800&q=80',
+    src: gl,
     alt: 'Packed moving boxes ready for relocation',
-    caption: 'Careful packing and preparation',
+    caption: 'Together We Move, Together We Deliver',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+    src: gl1,
     alt: 'Beautiful home ready for relocation',
     caption: 'Making every move feel like home',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
+    src: gl2,
     alt: 'Furniture arranged inside a modern home',
     caption: 'Professional furniture handling',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+    src: gl3,
     alt: 'Spacious home interior',
     caption: 'Moving into your new space',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=800&q=80',
+    src: gl4,
     alt: 'Modern residential interior',
     caption: 'Reliable home relocation',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80',
+    src: gl5,
     alt: 'Carefully furnished living space',
     caption: 'Your belongings handled with care',
   },

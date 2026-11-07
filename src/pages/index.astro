@@ -18,6 +18,16 @@ import { SITE, METADATA, I18N } from 'astrowind:config';
 import favIconSvg from '~/assets/favicons/favicon.svg';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import { getPermalink} from '~/utils/permalinks';
+import { Image } from 'astro:assets';
+
+import spic from '~/assets/images/servic/servic_1.jpg';
+import spic_ from '~/assets/images/servic/servic_2.jpg';
+import spic__ from '~/assets/images/servic/servic_3.jpg';
+import spic___ from '~/assets/images/servic/servic_4.jpg';
+import spic____ from '~/assets/images/servic/servic_5.jpg';
+import spic_____ from '~/assets/images/servic/servic_6.webp';
+import corp from '~/assets/images/coreproject/coreproject_1.jpg';
+import corp_ from '~/assets/images/coreproject/hero_2.png';
 
 //this is to add the startup on the routing
 
@@ -58,7 +68,7 @@ const structuredData = [
   
   <!-- Hero Widget ******************* -->
 <Hero
-    tagline="Ethiopia's Trusted Movers"
+   
     actions={[
       {
         variant: 'primary',
@@ -76,12 +86,12 @@ const structuredData = [
       Move Faster, Spend Less with <span class="text-accent dark:text-white">Trustpack Mover!</span>
     </Fragment>
 
-    <Fragment slot="subtitle">
+   <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        Experience seamless residential and corporate relocations with end-to-end packing, safe transport, and professional setup in as little as 4 hours.</span
+        Fast, hassle-free residential & corporate moves with end-to-end packing, transport, and setup.</span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">Trustpack & Move: Fast, Safe, Reliable.</span>
-      100% full responsibility for your belongings — from packing and loading to reassembly and installation across Addis Ababa and nationwide.
+      Full responsibility for your belongings across Addis Ababa and nationwide.
     </Fragment>
   </Hero>
 
@@ -107,25 +117,25 @@ const structuredData = [
 <QuickStart
     id="quick-start"
     classes={{ icon: 'bg-green-600 dark:bg-green-700' }}
-    title="How to Book Your Move in 3 Easy Steps"
-    subtitle="Fast, transparent, and completely hassle-free. Here is how simple it is to get started with Trustpack Mover."
+    title="Book Your Move in 3 Easy Steps"
+    subtitle="Fast, transparent, and hassle-free."
     items={[
       {
-        title: '1. Send Us Your Items',
+        title: '1. Send Items',
         description:
-          'Send photos or videos of the items you need moved along with your locations via <strong>Telegram or WhatsApp</strong> to 0968777773 / 0909388181.',
+          'Share item photos/videos and locations via <strong>Telegram/WhatsApp</strong> to 0968777773 / 0909388181.',
         icon: 'tabler:camera',
       },
       {
-        title: '2. Get a Fast, Transparent Quote',
+        title: '2. Get Fast Quote',
         description:
-          'Our pricing call center team evaluates your details instantly, or a supervisor conducts an on-site survey for complex corporate and residential moves.',
+          'Our team reviews your details or sends a supervisor for an instant, transparent estimate.',
         icon: 'tabler:calculator',
       },
       {
-        title: '3. We Pack, Move & Reassemble',
+        title: '3. We Pack & Move',
         description:
-          'Our professional team arrives with all packing materials (boxes, bubble wrap, plastic), loads securely, and handles complete reassembly in hours.',
+          'We arrive with all packing supplies, transport safely, and handle complete setup in hours.',
         icon: 'tabler:truck-delivery',
       },
     ]}
@@ -142,47 +152,47 @@ const structuredData = [
 
   <Features
     id="features"
-    tagline="Why Choose Us"
+   
   title="Why Move With Trustpack Mover"
-  subtitle="We combine full accountability, premium protective materials, and complete end-to-end service to give you a stress-free relocation."
-  items={[
+ items={[
     {
       title: '100% Property Responsibility',
       description:
-        'We take full accountability for your property and operate with absolute integrity, ensuring your belongings are completely safe from start to finish.',
+        'Full accountability and integrity—ensuring your belongings are safe from start to finish.',
       icon: 'tabler:shield-check',
     },
     {
-      title: 'Complete End-to-End Service',
+      title: 'End-to-End Service',
       description:
-        'From initial unpacking and packing to loading, shipping, reassembly, and repair, we manage every step of the moving journey seamlessly.',
+        'We handle packing, loading, transport, unpacking, and setup seamlessly.',
       icon: 'tabler:truck-loading',
     },
     {
-      title: 'In-House Quality Packaging',
+      title: 'Quality Packaging Materials',
       description:
-        'We supply and prepare top-grade materials ourselves—including durable cardboard boxes, plastic wrap, plaster, and heavy-duty bubble wrap.',
+        'We supply premium boxes, plastic wrap, plaster, and heavy-duty bubble wrap.',
       icon: 'tabler:box-seam',
     },
     {
       title: 'Utmost Care & Protection',
       description:
-        'Every single item is wrapped, padded, and handled with meticulous attention to detail to guarantee zero damage during transit.',
+        'Every item is wrapped and padded to guarantee zero transit damage.',
       icon: 'tabler:heart-handshake',
     },
     {
-      title: 'Careful Unpacking & Placement',
+      title: 'Unpacking & Placement',
       description:
-        'Our team doesn’t stop at delivery; we carefully unpack and return every item to its original designated spot in your new location.',
+        'We unpack and set up every item in its designated spot at your new space.',
       icon: 'tabler:home-check',
     },
     {
       title: 'Trusted Local Expertise',
       description:
-        'Proven service designed to eliminate the hassles and risks of local moving, providing a dependable standard you can rely on.',
+        'Dependable, stress-free moving services tailored across Addis Ababa.',
       icon: 'tabler:award',
     },
   ]}
+
   />
 
   <!-- Content Widget **************** -->
@@ -205,7 +215,7 @@ const structuredData = [
 
   <Content
     id="services"
-    tagline="Residential Moving"
+  
     title="Home Mover"
     items={[
       {
@@ -225,7 +235,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2070&q=80',
+      src: spic,
       alt: 'Home Mover Service',
     }}
   >
@@ -242,7 +252,7 @@ const structuredData = [
   <Content
     isAfterContent
     isReversed
-    tagline="Corporate Moving"
+   
     title="Office Relocation"
     items={[
       {
@@ -262,7 +272,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2070&q=80',
+      src:  spic_,
       alt: 'Office Relocation Service',
     }}
   >
@@ -278,7 +288,7 @@ const structuredData = [
   <!-- 3. Packing & Unpacking **************** -->
   <Content
     isAfterContent
-    tagline="Protection & Care"
+    
     title="Packing & Unpacking"
     items={[
       {
@@ -298,7 +308,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=2070&q=80',
+      src:  spic__,
       alt: 'Packing and Unpacking Service',
     }}
   >
@@ -315,7 +325,7 @@ const structuredData = [
   <Content
     isAfterContent
     isReversed
-    tagline="Assembly & Setup"
+  
     title="Dismantling & Mantling"
     items={[
       {
@@ -335,7 +345,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80',
+      src:  spic___,
       alt: 'Dismantling and Mantling Service',
     }}
   >
@@ -351,7 +361,7 @@ const structuredData = [
   <!-- 5. Storage Service **************** -->
   <Content
     isAfterContent
-    tagline="Secure Warehousing"
+    
     title="Storage Service"
     items={[
       {
@@ -371,7 +381,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=2070&q=80',
+      src:  spic____,
       alt: 'Storage Facility Service',
     }}
   >
@@ -389,7 +399,7 @@ const structuredData = [
   <Content
     isAfterContent
     isReversed
-    tagline="Property Hygiene"
+ 
     title="Cleaning Service"
     items={[
       {
@@ -409,7 +419,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=2070&q=80',
+      src:  spic_____,
       alt: 'Cleaning Service',
     }}
   >
@@ -453,7 +463,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src:  spic_,
       alt: 'Steps image',
     }}
   />
@@ -462,7 +472,7 @@ const structuredData = [
 <Projects
   id="portfolio"
   title="Proven Track Record in Relocation"
-  subtitle="Explore our successful moving operations across Ethiopia. From corporate headquarters and diplomatic missions to residential villas and fragile art collections, Trustpack and Move delivers flawless results with 100% property protection."
+ 
   items={[
     {
       title: 'Corporate & Office Relocation for Trade Link PLC',
@@ -502,7 +512,7 @@ const structuredData = [
       description:
         'High-security relocation for international embassies and diplomatic missions requiring strict confidentiality, sealed transit, and specialized hand-carried care.',
       image: {
-        src: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+        src: corp,
         alt: 'Diplomatic Institutions Relocation',
       },
       tags: ['Diplomatic', 'High Security', 'Confidential'],
@@ -513,7 +523,7 @@ const structuredData = [
       description:
         'Carefully moving bulk commercial items, store inventories, and heavy warehouse goods utilizing our fleet of large cargo trucks and trailers.',
       image: {
-        src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+        src: spic____,
         alt: 'Commercial Warehouse Cargo Transport',
       },
       tags: ['Commercial', 'Warehouse', 'Heavy Freight'],
@@ -524,7 +534,7 @@ const structuredData = [
       description:
         'Safe, long-distance freight transit from Addis Ababa to various regional states and major cities across Ethiopia with full real-time tracking.',
       image: {
-        src: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+        src: corp_,
         alt: 'Regional Freight Transportation in Ethiopia',
       },
       tags: ['Regional Transit', 'Long-Haul', 'Intercity'],
@@ -545,9 +555,9 @@ const structuredData = [
 <Timeline
     id="our-process"
     layout="alternate"
-    tagline="How We Work"
+  
     title="Your Move, Step by Step"
-    subtitle="From your first call to settling into your new space—here is how we make relocation effortless."
+    
     items={[
       {
         title: '1. Initial Inquiry & Quote Request',
@@ -600,27 +610,23 @@ const structuredData = [
 
   <!-- HighlightedPosts Widget ******* -->
 
-  <!-- <BlogHighlightedPosts
-    title="Find out more content in our Blog"
+ <BlogHighlightedPosts
+    title="Moving Guides & Relocation Tips"
     postIds={[
-      'get-started-website-with-astro-tailwind-css',
-      'how-to-customize-astrowind-to-your-brand',
-      'useful-resources-to-create-websites',
-      'landing',
+      'logistics-partner',
+      'deep-cleaning',
+      'reliable-transportation',
+      'integrated-services',
     ]}
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro v7 + Tailwind CSS v4.
-                        Astro is a very interesting technology. Thanks.
+    information={`Explore expert advice on packing, office relocation, fragile item care, and hassle-free moving across Addis Ababa and nationwide. Our guides are designed to help you prepare every step of your move with confidence.
                 `}
-  /> -->
+  />
 
   <!-- FAQs Widget ******************* -->
 
 <FAQs
     id="faqs"
     title="Frequently Asked Questions"
-    subtitle="Everything you need to know about moving, packing, storage, and pricing with Trustpack Mover."
-    tagline="FAQs"
     schema
     items={[
       {

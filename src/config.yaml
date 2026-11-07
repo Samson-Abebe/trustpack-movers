@@ -1,6 +1,6 @@
 site:
   name: Trustpack Mover
-  site: 'https://pack-addis-movers.vercel.app/' # Replace with your actual domain when live
+  site: 'https://pack-addis-movers.vercel.app' # Removed trailing slash
   base: '/'
   trailingSlash: false
 
@@ -18,14 +18,14 @@ metadata:
   openGraph:
     site_name: Trustpack Mover
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/default.png' # Properly indented list item
         width: 1200
         height: 628
     type: website
   twitter:
     handle: '@trustpackmover'
     site: '@trustpackmover'
-    cardType: summary_large_image 
+    cardType: summary_large_image
 
 i18n:
   language: en

@@ -1,27 +1,30 @@
 site:
   name: Trustpack Mover
-  site: 'https://pack-addis-movers.vercel.app' # Removed trailing slash
+  site: 'https://trustpack-movers.vercel.app'
   base: '/'
   trailingSlash: false
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
-# Default SEO metadata
 metadata:
   title:
     default: Trustpack Mover — Safe & Reliable Relocation in Ethiopia
     template: '%s — Trustpack Mover'
-  description: 'Professional residential & office moving, premium packing, furniture dismantling, TV mounting, and secure storage in Addis Ababa, Ethiopia.'
+
+  description: 'Professional residential and office moving, premium packing, furniture dismantling, TV mounting, and secure storage in Addis Ababa, Ethiopia.'
+
   robots:
     index: true
     follow: true
+
   openGraph:
     site_name: Trustpack Mover
     images:
-      - url: '~/assets/images/default.png' # Properly indented list item
+      - url: 'https://trustpack-movers.vercel.app/og-image.jpg'
         width: 1200
-        height: 628
+        height: 630
     type: website
+
   twitter:
     handle: '@trustpackmover'
     site: '@trustpackmover'

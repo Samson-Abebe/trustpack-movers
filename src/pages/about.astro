@@ -10,7 +10,11 @@ import Layout from '~/layouts/PageLayout.astro';
 
 
 import about from '~/assets/images/about.jpg';
-import about_ from '~/assets/images/about_.jpg';
+import team_ from '~/assets/images/teamL/teaml_1.jpg';
+import team from '~/assets/images/teamL/teaml_2.jpg';
+import team__ from '~/assets/images/teamL/teaml_3.jpg';
+import team___ from '~/assets/images/teamL/teaml_4.jpg';
+
 
 const metadata = {
   title: 'About us',
@@ -46,9 +50,9 @@ const metadata = {
     countUp
     stats={[
       { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Awards', amount: '12' },
-      { title: 'Moves', amount: '24' },
+      { title: 'Employees', amount: '160' },
+      { title: 'Awards', amount: '13' },
+      { title: 'Moves', amount: '2700' },
     ]}
   />
   
@@ -134,44 +138,43 @@ const metadata = {
 
   <!-- Timeline Widget **************** -->
 <Timeline
-    id="achievements"
-    tagline="Milestones & Track Record"
-    title="Key Achievements"
-    subtitle="Our journey of delivering dependable relocation, warehousing, and corporate moving solutions across Ethiopia."
-    layout="alternate"
-    items={[
-      {
-        date: 'Founded',
-        title: 'Safety-First Relocation Model',
-        description:
-          'Established to solve moving security challenges in Ethiopia by offering 100% accountable, all-inclusive packing and transport.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        date: 'Corporate Growth',
-        title: 'Trusted by Enterprise & Corporate Clients',
-        description:
-          'Partnered with major corporate entities like Trade Link PLC, embassies, and institutions for seamless office relocations with minimal downtime.',
-        icon: 'tabler:building-skyscraper',
-      },
-      {
-        date: 'Service Expansion',
-        title: 'Warehousing & Specialized Assembly',
-        description:
-          'Expanded operations to include secure temporary storage facilities alongside expert TV mounting and complex furniture dismantling.',
-        icon: 'tabler:building-warehouse',
-      },
-      {
-        date: 'Present Day',
-        title: 'Successful Moves',
-        description:
-          'Recognized as a leading professional moving service across Addis Ababa and regional routes, backed by top customer satisfaction.',
-        icon: 'tabler:award',
-        highlight: true,
-      },
-    ]}
-  />
-
+  id="achievements"
+  tagline="Company Journey & Future Roadmap"
+  title="Our Milestones & Vision"
+  subtitle="Building Ethiopia’s dependable, integrated platform for logistics, commercial transport, and professional cleaning services."
+  layout="alternate"
+  items={[
+    {
+      date: 'Foundation',
+      title: 'Established to Address Moving & Logistics Challenges',
+      description:
+        'Founded to solve everyday transportation, moving security, and space management challenges faced by individuals and organizations in Ethiopia.',
+      icon: 'tabler:rocket',
+    },
+ {
+      date: 'Strategic Expansion',
+      title: 'Corridor Operations & Fleet Deployment',
+      description:
+        'Established primary freight operations along the Addis Ababa–Adama commercial corridor, backed by our dedicated Eicher and Kiya transport fleet.',
+      icon: 'tabler:truck-loading',
+    },
+    {
+      date: 'Dual Service Growth',
+      title: 'Integrated Relocation & Professional Cleaning Platform',
+      description:
+        'Expanded our portfolio to deliver integrated logistics, high-security embassy moves, corporate relocations (such as Trade Link PLC), and professional cleaning services.',
+      icon: 'tabler:sparkles',
+      highlight: true,
+    },
+    {
+      date: 'Future Vision',
+      title: 'Fleet Expansion & Technology-Driven Growth',
+      description:
+        'Targeting 5 dedicated trucks, enhanced digital booking systems, expanded regional coverage, and institutional long-term contracts across East Africa.',
+      icon: 'tabler:target-arrow',
+    },
+  ]}
+/>
   <!-- Team Widget ******************** -->
 <Team
     id="team"
@@ -181,43 +184,43 @@ const metadata = {
  
     members={[
       {
-        name: 'Alicia Rivera',
-        role: ' role description ',
+        name: 'Berhanu Truneh',
+        role: ' Manager',
         image: {
-          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
-          alt: 'Alicia Rivera',
+          src: team,
+          alt: 'Berhanu Truneh',
         },
-        bio: 'A summary of their core message and intent',
+        bio: 'TrustPack and Movers',
     
       },
       {
-        name: 'Daniel Okafor',
-        role: ' role description ',
+        name: 'Lideta Werku',
+        role: 'Deputy Manager & Call Center',
         image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-          alt: 'Daniel Okafor',
+          src: team_,
+          alt: "Lideta Werku"
         },
-        bio: "A summary of their core message and intent",
+        bio: "TrustPack and Movers",
       
       },
       {
-        name: 'Mei Tanaka',
-        role: 'role description',
+        name: 'Wedebu Kifetew',
+        role: 'Supervisor',
         image: {
-          src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-          alt: 'Mei Tanaka',
+          src: team__,
+          alt: 'Wedebu Kifetew',
         },
-        bio: "A summary of their core message and intent",
+        bio: "TrustPack and Movers",
        
       },
       {
-        name: 'Jonas Weber',
-        role: 'role descriptio',
+        name: 'Gebre Abera',
+        role: 'Supervisor',
         image: {
-          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
-          alt: 'Jonas Weber',
+          src: team___,
+          alt: 'Gebre Abera',
         },
-        bio: "A summary of their core message and intent",
+        bio: "TrustPack and Movers",
       
       },
     ]}

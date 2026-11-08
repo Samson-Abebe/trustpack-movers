@@ -146,7 +146,7 @@ export const footerData = {
     { text: 'Privacy' },
   ],
   socialLinks: [
-    { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: 'https://t.me/trustpackandmove' },
+    { ariaLabel: 'Telegram', icon: 'tabler:brand-telegram', href: 'https://t.me/+ndcozE8Xd2liMmFk' },
     { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'https://wa.me/251900000000' },
     { ariaLabel: 'Phone', icon: 'tabler:phone', href: 'tel:+251900000000' },
   ],

@@ -21,13 +21,15 @@ import { getPermalink} from '~/utils/permalinks';
 import { Image } from 'astro:assets';
 
 import spic from '~/assets/images/servic/servic_1.jpg';
-import spic_ from '~/assets/images/servic/servic_2.jpg';
+import spic_ from '~/assets/images/servic/servic_.jpg';
 import spic__ from '~/assets/images/servic/servic_3.jpg';
 import spic___ from '~/assets/images/servic/servic_4.jpg';
-import spic____ from '~/assets/images/servic/servic_5.jpg';
-import spic_____ from '~/assets/images/servic/servic_6.webp';
+import spic____ from '~/assets/images/servic/servic_50.jpg';
+import spic_____ from '~/assets/images/servic/servic_5.jpg';
 import corp from '~/assets/images/coreproject/coreproject_1.jpg';
 import corp_ from '~/assets/images/coreproject/hero_2.jpg';
+import corp_tv from '~/assets/images/coreproject/tv_.jpg';
+import sam from '~/assets/images/servic/servic_10.jpg';
 
 //this is to add the startup on the routing
 
@@ -97,21 +99,7 @@ const structuredData = [
 
   <!-- SocialProof Widget ************ -->
 
-  <SocialProof
-    id="proof"
-    classes={{ container: '!pb-14 md:!pb-20' }}
-    items={[
-      {
-        value: '#1',
-        label: 'Top-Rated Moving Services',
-        icon: 'tabler:star-filled',
-        color: 'text-amber-400',
-    
-      },
-      { value: '100', label: 'On-Time Safe Delivery', icon: 'tabler:gauge', color: 'text-emerald-500' },
-      {  label: 'Fully Licensed & Insured Team', icon: 'tabler:license', color: 'text-sky-500' },
-    ]}
-  />
+
 
   <!-- QuickStart Widget ************* -->
 <QuickStart
@@ -272,7 +260,7 @@ const structuredData = [
       },
     ]}
     image={{
-      src:  spic_,
+      src:  sam,
       alt: 'Office Relocation Service',
     }}
   >
@@ -448,7 +436,7 @@ const structuredData = [
       description:
         'Carefully unpacking, packing, loading, transporting, and reassembling the entire Trade Link PLC office, including all workstations, executive furniture, and sensitive IT equipment.',
       image: {
-        src: 'https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+        src: sam,
         alt: 'Trade Link PLC Corporate Office Relocation',
       },
       tags: ['Corporate', 'Office', 'Reassembly'],
@@ -459,7 +447,7 @@ const structuredData = [
       description:
         'Smooth end-to-end relocation of luxury villas, modern apartments, condominiums, and high-rise residences across Addis Ababa with zero damage.',
       image: {
-        src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+        src: spic,
         alt: 'Full Residential Moving Services',
       },
       tags: ['Residential', 'Villas', 'Apartments'],
@@ -470,7 +458,7 @@ const structuredData = [
       description:
         'Transporting and safely mounting large smart TVs (65", 75", 100" and above) using custom shockproof protective packaging and precision wall installation.',
       image: {
-        src: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=928&q=80',
+        src: corp_tv,
         alt: 'Large Smart TV Packing and Mounting',
       },
       tags: ['Electronics', 'TV Mounting', 'Specialized'],
@@ -583,7 +571,7 @@ const structuredData = [
     title="Moving Guides & Relocation Tips"
     postIds={[
       'logistics-partner',
-      'deep-cleaning',
+      'how-to-plan-efficient-goods-transportation',
       'reliable-transportation',
       'integrated-services',
     ]}

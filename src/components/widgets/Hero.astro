@@ -1,9 +1,12 @@
----
 
+---
 import Button from '~/components/ui/Button.astro';
 import truckImage from '~/assets/images/hero/hero_1.png';
 import truckImage_ from '~/assets/images/hero/hero_2.jpg';
 import truckImage__ from '~/assets/images/hero/hero_3.jpg';
+import truckImage_4 from '~/assets/images/hero/hero_4.jpg';
+import truckImage_5 from '~/assets/images/hero/hero_5.jpg';
+import truckImage_6 from '~/assets/images/hero/hero_6.jpg';
 
 import type { Hero as Props } from '~/types';
 
@@ -26,10 +29,6 @@ const {
   bg = await Astro.slots.render('bg'),
 } = Astro.props as ExtendedHeroProps;
 
-const { aspect: imageAspect, ...imageProps } = typeof image === 'object' && image ? image : { src: '', alt: '' };
-const imageWhole = imageAspect === 'auto';
-
-// Default images for the slider if none are passed in `slides`
 const defaultSlides = [
   {
     src: truckImage.src,
@@ -43,125 +42,115 @@ const defaultSlides = [
     src: truckImage__.src,
     alt: 'Beautiful home ready for relocation',
   },
+    {
+    src: truckImage_4.src,
+    alt: 'Beautiful home ready for relocation',
+  },
+    {
+    src: truckImage_5.src,
+    alt: 'Beautiful home ready for relocation',
+  },
+    {
+    src: truckImage_6.src,
+    alt: 'Beautiful home ready for relocation',
+  },
 ];
 
 const activeSlides = slides.length > 0 ? slides : defaultSlides;
 ---
 
-<section class="relative md:-mt-[76px] not-prose overflow-hidden" {...id ? { id } : {}}>
-  <!-- Background Decorator -->
-  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-    <slot name="bg">
-      {bg ? <Fragment set:html={bg} /> : (
-        <div class="absolute inset-0 bg-gradient-to-b from-blue-50/50 via-transparent to-transparent dark:from-slate-900/50"></div>
-      )}
-    </slot>
+<section 
+  class="relative bg-slate-950 sm:min-h-[440px] lg:min-h-[500px] flex flex-col sm:flex-row sm:items-center sm:justify-center overflow-hidden not-prose shadow-2xl" 
+  {...id ? { id } : {}}
+>
+  
+  <!-- Image Slider: Compact height on Mobile, Full-coverage background on Desktop -->
+  <div class="relative sm:absolute sm:inset-0 w-full h-[200px] sm:h-full overflow-hidden z-0 bg-slate-900 shrink-0">
+    <div class="hero-slider relative w-full h-full">
+      {activeSlides.map((slide, index) => (
+        <div 
+          class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out backface-hidden ${
+            index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
+          data-slide-index={index}
+        >
+          <img 
+            src={slide.src} 
+            alt={slide.alt || 'Hero Slide'} 
+            class="w-full h-full object-cover sm:object-fill object-center backface-hidden"
+            loading={index === 0 ? 'eager' : 'lazy'}
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-black/20 sm:bg-gradient-to-r sm:from-black/85 sm:via-black/50 sm:to-black/15 pointer-events-none"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="absolute bottom-2.5 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 drop-shadow-md">
+      {activeSlides.map((_, index) => (
+        <span 
+          class={`hero-dot w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-white w-5 sm:w-6 shadow' : 'bg-white/50'}`}
+          data-dot-index={index}
+        ></span>
+      ))}
+    </div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-    <div class="pt-0 md:pt-[76px] pointer-events-none"></div>
-    <div class="py-12 md:py-20 lg:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        
-        <!-- Left Content Column -->
-        <div class="lg:col-span-6 text-left">
-          {badge && (
-            <span class="inline-block mb-4 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary dark:bg-primary/25 dark:text-blue-200">
-              {badge}
-            </span>
-          )}
-          {tagline && (
-            <p class="text-base text-secondary dark:text-blue-200 font-bold tracking-wide uppercase mb-2" set:html={tagline} />
-          )}
-          {title && (
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight mb-6 font-heading text-heading" set:html={title} />
-          )}
+  <!-- Content: Compact on Mobile & Desktop -->
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-4 pb-8 sm:py-12 lg:py-16 z-10 w-full text-white bg-slate-950 sm:bg-transparent">
+    <div class="max-w-2xl">
+      {badge && (
+        <span class="inline-block mb-2.5 sm:mb-3 rounded-full border border-white/25 bg-white/10 sm:bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white backdrop-blur-md shadow-lg">
+          {badge}
+        </span>
+      )}
+      {tagline && (
+        <p class="text-xs sm:text-sm text-blue-300 font-bold tracking-wide uppercase mb-1.5 drop-shadow-md" set:html={tagline} />
+      )}
 
-          <!-- Mobile Only Image Slider (Visible on screens smaller than lg) -->
-          <div class="block lg:hidden w-full mb-6">
-            <div class="relative w-full h-[260px] sm:h-[380px] rounded-2xl overflow-hidden shadow-2xl border border-slate-200/50 dark:border-slate-800/50 bg-slate-100 dark:bg-slate-800">
-              <div class="hero-slider relative w-full h-full">
-                {activeSlides.map((slide, index) => (
-                  <div 
-                    class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                    data-slide-index={index}
-                  >
-                    <img 
-                      src={slide.src} 
-                      alt={slide.alt || 'Hero Slide'} 
-                      class="w-full h-full object-cover" 
-                      loading={index === 0 ? 'eager' : 'lazy'}
-                    />
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
-                  </div>
-                ))}
+      <!-- Mobile-Only Custom Tagline Line -->
+      <span class="block mb-2 sm:hidden font-bold text-blue-400 text-sm tracking-wide drop-shadow">
+        Trustpack & Move: Fast, Safe, Reliable.
+      </span>
+
+      {title && (
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-3 sm:mb-4 font-heading text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]" set:html={title} />
+      )}
+
+      <!-- Hidden on mobile (hidden sm:block) -->
+      {subtitle && (
+        <p class="hidden sm:block text-base sm:text-lg text-slate-200 mb-5 sm:mb-6 leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] font-medium" set:html={subtitle} />
+      )}
+
+      {actions && (
+        <div class="flex flex-col sm:flex-row gap-2.5 sm:gap-4 mb-2 sm:mb-3 drop-shadow-lg">
+          {Array.isArray(actions) ? (
+            actions.map((action) => (
+              <div class="flex w-full sm:w-auto">
+               <Button
+  {...(action || {})}
+  class="w-full sm:mb-0 text-white hover:text-black shadow-xl hover:shadow-2xl transition-all duration-300"
+/>
               </div>
-              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-                {activeSlides.map((_, index) => (
-                  <span 
-                    class={`hero-dot w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-white w-6' : 'bg-white/50'}`}
-                    data-dot-index={index}
-                  ></span>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {subtitle && (
-            <p class="text-lg sm:text-xl text-muted mb-8 dark:text-slate-300 leading-relaxed" set:html={subtitle} />
+            ))
+          ) : (
+            <Fragment set:html={actions} />
           )}
-
-          {actions && (
-            <div class="flex flex-col sm:flex-row gap-4 mb-6">
-              {Array.isArray(actions) ? (
-                actions.map((action) => (
-                  <div class="flex w-full sm:w-auto">
-                    <Button {...(action || {})} class="w-full sm:mb-0 shadow-lg hover:shadow-xl transition-all duration-300" />
-                  </div>
-                ))
-              ) : (
-                <Fragment set:html={actions} />
-              )}
-            </div>
-          )}
-
-          {content && <div class="mt-4 text-sm text-muted dark:text-slate-400" set:html={content} />}
         </div>
+      )}
 
-        <!-- Desktop Only Image Slider (Hidden on mobile, visible on lg screens and up) -->
-        <div class="hidden lg:block col-span-1 lg:col-span-6 w-full">
-          <div class="relative w-full h-[480px] rounded-2xl overflow-hidden shadow-2xl border border-slate-200/50 dark:border-slate-800/50 bg-slate-100 dark:bg-slate-800">
-            <div class="hero-slider relative w-full h-full">
-              {activeSlides.map((slide, index) => (
-                <div 
-                  class={`hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-                  data-slide-index={index}
-                >
-                  <img 
-                    src={slide.src} 
-                    alt={slide.alt || 'Hero Slide'} 
-                    class="w-full h-full object-cover" 
-                    loading={index === 0 ? 'eager' : 'lazy'}
-                  />
-                  <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"></div>
-                </div>
-              ))}
-            </div>
-            <div class="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-              {activeSlides.map((_, index) => (
-                <span 
-                  class={`hero-dot w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === 0 ? 'bg-white w-6' : 'bg-white/50'}`}
-                  data-dot-index={index}
-                ></span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-      </div>
+      {content && <div class="mt-2 sm:mt-3 text-xs sm:text-sm text-slate-300 drop-shadow" set:html={content} />}
     </div>
   </div>
 </section>
+
+<style>
+  .backface-hidden {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: opacity;
+  }
+</style>
 
 <script>
   function setupHeroSlider() {
@@ -174,23 +163,30 @@ const activeSlides = slides.length > 0 ? slides : defaultSlides;
       if (!slides.length) return;
 
       let currentIndex = 0;
-      const intervalTime = 4000;
+      const intervalTime = 4500;
 
       setInterval(() => {
-        slides[currentIndex].classList.remove('opacity-100', 'z-10');
-        slides[currentIndex].classList.add('opacity-0', 'z-0');
-        if (dots && dots[currentIndex]) {
-          dots[currentIndex].classList.remove('bg-white', 'w-6');
-          dots[currentIndex].classList.add('bg-white/50');
-        }
-
+        const prevIndex = currentIndex;
         currentIndex = (currentIndex + 1) % slides.length;
 
-        slides[currentIndex].classList.remove('opacity-0', 'z-0');
-        slides[currentIndex].classList.add('opacity-100', 'z-10');
-        if (dots && dots[currentIndex]) {
-          dots[currentIndex].classList.remove('bg-white/50');
-          dots[currentIndex].classList.add('bg-white', 'w-6');
+        const prevSlide = slides[prevIndex];
+        prevSlide.classList.remove('opacity-100', 'z-10');
+        prevSlide.classList.add('opacity-0', 'z-0');
+
+        const currentSlide = slides[currentIndex];
+        currentSlide.classList.remove('opacity-0', 'z-0');
+        currentSlide.classList.add('opacity-100', 'z-10');
+
+        if (dots) {
+          dots.forEach((dot, idx) => {
+            if (idx === currentIndex) {
+              dot.classList.remove('bg-white/50');
+              dot.classList.add('bg-white', 'w-5', 'sm:w-6', 'shadow');
+            } else {
+              dot.classList.remove('bg-white', 'w-5', 'sm:w-6', 'shadow');
+              dot.classList.add('bg-white/50');
+            }
+          });
         }
       }, intervalTime);
     });

@@ -42,15 +42,15 @@ const defaultSlides = [
     src: truckImage__.src,
     alt: 'Beautiful home ready for relocation',
   },
-    {
+  {
     src: truckImage_4.src,
     alt: 'Beautiful home ready for relocation',
   },
-    {
+  {
     src: truckImage_5.src,
     alt: 'Beautiful home ready for relocation',
   },
-    {
+  {
     src: truckImage_6.src,
     alt: 'Beautiful home ready for relocation',
   },
@@ -60,7 +60,7 @@ const activeSlides = slides.length > 0 ? slides : defaultSlides;
 ---
 
 <section 
-  class="relative bg-slate-950 sm:min-h-[440px] lg:min-h-[500px] flex flex-col sm:flex-row sm:items-center sm:justify-center overflow-hidden not-prose shadow-2xl" 
+  class="relative bg-slate-950 min-h-[100svh] sm:min-h-[440px] lg:min-h-[500px] flex flex-col sm:flex-row sm:items-center sm:justify-center overflow-hidden not-prose shadow-2xl" 
   {...id ? { id } : {}}
 >
   
@@ -130,7 +130,7 @@ const activeSlides = slides.length > 0 ? slides : defaultSlides;
                <Button
   {...(action || {})}
   class="w-full sm:mb-0 text-white hover:text-black shadow-xl hover:shadow-2xl transition-all duration-300"
-/>
+ />
               </div>
             ))
           ) : (

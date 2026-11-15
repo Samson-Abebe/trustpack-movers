@@ -4,6 +4,7 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Brands from '~/components/widgets/Brands.astro';
+import OfficeMap from '../components/widgets/officmap.astro';
 
 const metadata = {
   title: 'Contact',
@@ -11,6 +12,7 @@ const metadata = {
     'Contact page demo built with AstroWind: a form, contact details and support links in one accessible layout.',
 };
 ---
+<!-- kality81  fiyel bet73 -->
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
@@ -65,6 +67,27 @@ const metadata = {
       },
     ]}
   />
+
+<div class="space-y-8">
+  <!-- First Office: Kality -->
+<OfficeMap 
+  officeName="Kality - Addis Ababa"
+  mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3941.7752547433147!2d38.767475999999995!3d8.900474999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOMKwNTQnMDEuNyJOIDM4wrA0NicwMi45IkU!5e0!3m2!1sen!2set!4v1794746704912!5m2!1sen!2set"
+  mapLink="https://goo.gl/maps/s7EsmigPteaFeH3B7"
+  phone="+251 11 123 4567"
+  email="contact@example.com"
+/>
+
+  <!-- Second Office: Ethiopia Fiyel Bet -->
+<OfficeMap 
+  officeName="CMC - Addis Ababa"
+  address="Fiyel Bet (30m)"
+  mapEmbedUrl="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1648.5032231187065!2d38.856254639772125!3d9.009466051647717!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDAnMzQuOSJOIDM4wrA1MScyMi44IkU!5e0!3m2!1sen!2set!4v1794746790076!5m2!1sen!2set"
+  mapLink="https://maps.google.com/maps?q=9.009681,38.856319&ll=9.009681,38.856319&z=16"
+  phone="+251 968777773"
+  email="Trustpackandmove09@gmail.com"
+/>
+</div>
 
 
 <Brands

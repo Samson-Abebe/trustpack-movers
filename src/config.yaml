@@ -1,5 +1,5 @@
 site:
-  name: Trustpack Mover
+  name: TrustPack Mover
   site: 'https://trustpack-movers.vercel.app'
   base: '/'
   trailingSlash: false

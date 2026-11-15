@@ -22,11 +22,11 @@ export const headerData = {
           href: getPermalink('/Trust'),
         },
         {
-          text: 'About us',
+          text: 'About US',
           href: getPermalink('/about'),
         },
         {
-          text: 'Contact',
+          text: 'Contact US',
           href: getPermalink('/contact'),
         }, 
       ],

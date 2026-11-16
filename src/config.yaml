@@ -1,10 +1,10 @@
 site:
   name: TrustPack Mover
-  site: 'https://trustpack-movers.vercel.app'
+  site: 'https://www.trustpackmover.com'
   base: '/'
   trailingSlash: false
 
-  googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
+  googleSiteVerificationId: Rt_4hkAS382sD2Y6t02w6X5fdf_5yBk0fMXYXbkBONc
 
 metadata:
   title:
@@ -20,7 +20,7 @@ metadata:
   openGraph:
     site_name: TrustPack Mover
     images:
-      - url: 'https://trustpack-movers.vercel.app/og-image.jpg'
+      - url: 'https://www.trustpackmover.com/og-image.jpg'
         width: 1200
         height: 630
     type: website

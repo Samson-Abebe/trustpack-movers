@@ -21,7 +21,7 @@ metadata:
     site_name: TrustPack Mover
     images:
       - url: 'https://www.trustpackmover.com/og-image.jpg'
-        width: 1200
+        width: 1500
         height: 630
     type: website
 

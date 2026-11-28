@@ -82,4 +82,4 @@ Streamline your supply chain and reduce operational stress with Ethiopia's premi
 * **Hotlines:** `0968777773` / `0909388181`
 * **Email:** Trustpackandmove09@gmail.com
 * **Head Office:** Fyel bet 30m, Kality Sheger Building, Addis Ababa, Ethiopia
-* **Official Website:** [www.trustpackandmove.com](https://www.trustpackandmove.com)
+* **Official Website:** [www.trustpackmover.com](https://www.trustpackmover.com)

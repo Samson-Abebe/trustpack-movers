@@ -88,4 +88,4 @@ Simplify your goods transportation between Addis Ababa and Adama with Ethiopia's
 * **Call Hotlines:** `0968777773` / `0909388181`
 * **Email:** Trustpackandmove09@gmail.com
 * **Head Office:** Fyel bet 30m, Kality Sheger Building, Addis Ababa, Ethiopia
-* **Official Website:** [www.trustpackandmove.com](https://www.trustpackandmove.com)
+* **Official Website:** [www.trustpackmover.com](https://www.trustpackmover.com)
